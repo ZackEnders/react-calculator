@@ -44,6 +44,11 @@ class App extends Component {
 
     return total;
   }
+  
+  keyGen = () => {
+    return Date.now()
+  }
+
 
   getButtonValue = (event) => {
     event.preventDefault();
@@ -140,10 +145,6 @@ class App extends Component {
     }
   }
 
-  keyGen = () => {
-    return Date.now()
-  }
-
   generateButtons = () => {
     const buttonsArray = this.buttons.map((btn, index) => {
       return (
@@ -166,7 +167,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="calculator">
-            <CalculatorScreen numbersArray={displayMathCompleted} current={currentNumber}/>
+            <CalculatorScreen numbersArray={displayMathCompleted} currentTotal={currentNumber}/>
             {buttons}
         </div>
       </div>

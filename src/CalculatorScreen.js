@@ -1,10 +1,10 @@
 import React from 'react';
 
-const CalculatorScreen = (props) => {
+const CalculatorScreen = ({numbersArray, currentTotal}) => {
     return (
         <div className="calc-screen">
-            <div className="all-the-math">{props.numbersArray}</div>
-            <div className="total">{props.current || 0}</div>
+            <div className="all-the-math">{numbersArray}</div>
+            <div className="total">{currentTotal || 0}</div>
         </div>
     );
 }
