@@ -1,33 +1,74 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #131313;
 }
 
-.App-link {
-  color: #61dafb;
+.calculator {
+  max-width: 300px;
+  display: flex;
+  flex-flow: row wrap;
+  border: 2px solid rgb(185, 185, 185);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calc-screen {
+  width: 100%;
+  height: 100px;
+  background-color: #333;
+  color: #fff;
+  text-align: right;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  padding: 1rem
+}
+
+.all-the-math {
+  font-size: 14px;
+}
+
+.all-the-math span {
+  margin: 4px;
+}
+
+.total {
+  font-size: 56px;
+}
+
+button {
+  width: 75px;
+  padding: 1.5rem;
+  background-color: #333;
+  color: #fff;
+  font-weight: 800;
+  font-size: 18px;
+  border-color: rgb(185, 185, 185);
+  cursor: pointer;
+}
+
+button.double {
+  width: 150px;
+  padding: 1.5rem;
+}
+
+button:focus {
+  outline: none;
+
+}
+
+button:active {
+  outline: none;
+  border-color: #000;
+}
+
+.symbol-button {
+  color: #131313;
+  background-color: rgb(214, 139, 0);
+}
+
+.mod-button {
+  color: #131313;
+  background-color: rgb(126, 126, 126);
 }
